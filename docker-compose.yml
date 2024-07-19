@@ -9,7 +9,6 @@ services:
       - "7011:8081"
     networks:
       - mongodb-network
-      - backend-network
       - multishop-catalog-network
 
 networks:
