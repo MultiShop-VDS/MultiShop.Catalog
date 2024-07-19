@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  catalog-image:
+    image: multi-shop-catalog-api
+    container_name: catalog-api
+    ports:
+      - "7010:8080"
+      - "7011:8081"
+    networks:
+      - mongodb-network
+      - backend-network
+      - multishop-catalog-network
+
+networks:
+  mongodb-network:
+    external: true
+  backend-network:
+    external: true
+  multishop-catalog-network:
+    external: true
