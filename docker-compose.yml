@@ -15,7 +15,5 @@ services:
 networks:
   mongodb-network:
     external: true
-  backend-network:
-    external: true
   multishop-catalog-network:
     external: true
