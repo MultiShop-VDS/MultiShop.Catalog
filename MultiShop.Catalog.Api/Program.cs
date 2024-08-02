@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Options;
 using MultiShop.Catalog.Api.Services.CategoryServices;
+using MultiShop.Catalog.Api.Services.FeatureServices;
 using MultiShop.Catalog.Api.Services.FeatureSliderServices;
 using MultiShop.Catalog.Api.Services.ProductDetailServices;
 using MultiShop.Catalog.Api.Services.ProductImageServices;
@@ -24,6 +25,7 @@ builder.Services.AddScoped<IProductDetailService, ProductDetailService>();
 builder.Services.AddScoped<IProductImageService, ProductImageService>();
 builder.Services.AddScoped<IFeatureSliderService, FeatureSliderService>();
 builder.Services.AddScoped<ISpecialOfferService, SpecialOfferService>();
+builder.Services.AddScoped<IFeatureService, FeatureService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
