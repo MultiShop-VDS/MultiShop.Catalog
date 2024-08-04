@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Options;
+using MultiShop.Catalog.Api.Services.BrandServices;
 using MultiShop.Catalog.Api.Services.CategoryServices;
 using MultiShop.Catalog.Api.Services.FeatureServices;
 using MultiShop.Catalog.Api.Services.FeatureSliderServices;
@@ -28,6 +29,7 @@ builder.Services.AddScoped<IFeatureSliderService, FeatureSliderService>();
 builder.Services.AddScoped<ISpecialOfferService, SpecialOfferService>();
 builder.Services.AddScoped<IFeatureService, FeatureService>();
 builder.Services.AddScoped<IOfferDiscountService, OfferDiscountService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
 using MongoDB.Driver;
 using MultiShop.Catalog.Api.Dtos.SpecialOfferDtos;
-using MultiShop.Catalog.Api.Dtos.SpecialOfferDtos;
 using MultiShop.Catalog.Api.Entities;
-using MultiShop.Catalog.Api.Services.SpecialOfferServices;
 using MultiShop.Catalog.Api.Settings;
 
 namespace MultiShop.Catalog.Api.Services.SpecialOfferServices

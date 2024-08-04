@@ -1,4 +1,4 @@
-﻿ namespace MultiShop.Catalog.Api.Dtos.SpecialOfferDtos
+﻿namespace MultiShop.Catalog.Api.Dtos.SpecialOfferDtos
 {
     public class GetByIdSpecialOfferDto
     {
