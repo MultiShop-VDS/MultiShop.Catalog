@@ -44,10 +44,10 @@ namespace MultiShop.Catalog.Api.Services.ProductImageServices
             return getByIdProductImageDto;
         }
 
-        public async Task<List<GetByIdProductImageDto>> GetByProductIdProductImagesAsync(string id)
+        public async Task<GetByIdProductImageDto> GetByProductIdProductImagesAsync(string id)
         {
             var values = await (await _ProductImageCollection.FindAsync<ProductImage>(ProductImage => ProductImage.ProductId == id)).ToListAsync();
-            return _mapper.Map<List<GetByIdProductImageDto>>(values);
+            return _mapper.Map<GetByIdProductImageDto>(values);
         }
 
         public async Task UpdateProductImageAsync(UpdateProductImageDto updateProductImageDto)
