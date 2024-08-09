@@ -14,12 +14,18 @@ namespace MultiShop.Catalog.Api.Controllers
         {
             _ProductImageService = ProductImageService;
         }
-
+        //
         [HttpGet]
         public async Task<IActionResult> ProductImageList()
         {
             List<ResultProductImageDto> resultProductImageDtos = await _ProductImageService.GetAllProductImageAsync();
             return Ok(resultProductImageDtos);
+        }
+        [HttpGet("GetByProductIdProductImagesAsync")]
+        public async Task<IActionResult> GetByProductIdProductImagesAsync(string id)
+        {
+            var values = await _ProductImageService.GetByProductIdProductImagesAsync(id);
+            return Ok(values);
         }
 
         [HttpGet("{id}")]
