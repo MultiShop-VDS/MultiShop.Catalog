@@ -57,3 +57,4 @@ namespace MultiShop.Catalog.Api.Services.ProductImageServices
         }
     }
 }
+ 
