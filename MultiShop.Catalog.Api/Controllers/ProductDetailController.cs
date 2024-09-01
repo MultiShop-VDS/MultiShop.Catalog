@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MultiShop.Catalog.Api.Dtos.ProductsDetailDtos;
 using MultiShop.Catalog.Api.Services.ProductDetailServices;
 
 namespace MultiShop.Catalog.Api.Controllers
 {
+    [Authorize]
+
     [Route("api/[controller]")]
     [ApiController]
     public class ProductDetailController : ControllerBase
@@ -35,7 +38,7 @@ namespace MultiShop.Catalog.Api.Controllers
             var values = await _ProductDetailService.GetByProductIdProductDetailAsync(id);
             return Ok(values);
         }
-        
+
 
         [HttpPost]
         public async Task<IActionResult> CreateProductDetail(CreateProductDetailDto createProductDetailDto)

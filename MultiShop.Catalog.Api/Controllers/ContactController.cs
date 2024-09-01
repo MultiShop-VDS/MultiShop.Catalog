@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.Catalog.Api.Dtos.ContactDtos;
 using MultiShop.Catalog.Api.Services.ContactServices;
 
 namespace MultiShop.Catalog.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ContactController : ControllerBase
