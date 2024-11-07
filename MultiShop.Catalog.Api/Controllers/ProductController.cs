@@ -52,15 +52,15 @@ namespace MultiShop.Catalog.Api.Controllers
             return Ok("Product Deleted");
         }
 
-        [HttpGet("ProductsWithCategory")]
-        public async Task<IActionResult> GetProductsWithCategory()
+        [HttpGet("ProductListWithCategory")]
+        public async Task<IActionResult> ProductListWithCategory()
         {
             var values = await _ProductService.GetProductsWithCategoryAsync();
             return Ok(values);
         }
 
-        [HttpGet("ProductsWithCategoryByCategoryId")]
-        public async Task<IActionResult> GetProductsWithCategoryByCategoryId(string id)
+        [HttpGet("ProductListWithCategoryByCategoryId/{id}")]
+        public async Task<IActionResult> ProductListWithCategoryByCategoryId(string id)
         {
             var values = await _ProductService.GetProductsWithCategoryByCategoryIdAsync(id);
             return Ok(values);
