@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
-using MultiShop.Catalog.Api.Configurations;
-using MultiShop.Catalog.Api.Extensions;
 using MultiShop.Catalog.Api.Services.AboutServices;
 using MultiShop.Catalog.Api.Services.BrandServices;
 using MultiShop.Catalog.Api.Services.CategoryServices;
