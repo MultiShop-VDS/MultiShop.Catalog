@@ -18,9 +18,6 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-TimeZoneInfo azTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Azerbaijan Standard Time");
-DateTime currentTimeInAZT = TimeZoneInfo.ConvertTime(DateTime.UtcNow, azTimeZone);
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
 {
     opt.Authority = builder.Configuration["IdentityServerUrl"];
