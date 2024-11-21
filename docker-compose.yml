@@ -6,13 +6,3 @@ services:
     container_name: catalog-api
     ports:
       - "7010:8080"
-      - "7011:8081"
-    networks:
-      - mongodb-network
-      - multishop-catalog-network
-
-networks:
-  mongodb-network:
-    external: true
-  multishop-catalog-network:
-    external: true
